@@ -3,6 +3,7 @@ package com.basicauth.BasicAuth.Registration;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
+import lombok.ToString;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -15,6 +16,7 @@ import java.util.Set;
 @Table(name = "UserMaster")
 @RequiredArgsConstructor
 @Data
+@ToString
 public class AppUser implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
