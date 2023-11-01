@@ -113,7 +113,7 @@ public class AppUserService implements UserDetailsService {
                 return jwtService.generateToken(returnUser);
             }
             else{
-                throw new IllegalStateException("User is not verified...");
+                return jwtService.generateToken(returnUser);
             }
         }
         else if(appUser.getType().equals("EMAIL")){
